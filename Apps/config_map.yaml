@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "config-map"
+  namespace: "argo-cd"
+data:
+  APP_NAME: "Fast Cook"
+  API_URL: "http://34.89.173.97:81"
+  APP_URL: "http://34.141.116.55:82"
+
+  DATABASE_HOST: "mysql.argo-cd.svc.cluster.local"
+  DATABASE_PORT: "3306"
+  DATABASE_USER: "root"
+  DATABASE_PASSWORD: "root"
+  DATABASE_NAME: "fastCook"
+
+  JWT_USER_SECRET_KEY: "user1abcd"
+  JWT_ADMIN_SECRET_KEY: "admin1abcd"
+  JWT_USER_EXPIRE_TIME: "50h"
+  JWT_ADMIN_EXPIRE_TIME: "50h"
+
+  MAIL_MAILER: "smtp"
+  MAIL_HOST: "smtp.gmail.com"
+  MAIL_PORT: "587"
+  MAIL_USERNAME: "fast.cook.padc@gmail.com"
+  MAIL_PASSWORD: "tdakxhxvjdrqxaju"
+  MAIL_FROM_ADDRESS: "fast.cook.padc@gmail.com"

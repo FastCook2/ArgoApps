@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontendm1
+  name: frontend-mobile-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontendm1
+  template:
+    metadata:
+      labels:
+        app: frontendm1
+    spec:
+      containers:
+      - image: nginx:1.14.2
+        name: frontendm1
+        ports:
+          - name: "frontendm1"
+            protocol: "TCP"
+            containerPort: 80
+        env:
+          - name: REACT_APP_BASE_URL
+            valueFrom:
+              configMapKeyRef:
+                name: "config-map"
+                key: "API_URL"
