@@ -21,7 +21,7 @@ spec:
             configMapKeyRef:
               key: API_URL
               name: config-map
-        image: 'sahakanush224/fast_cook_front_admin:'
+        image: sahakanush224/fast_cook_front_admin:0.0.3
         name: frontend
         ports:
         - containerPort: 3000
