@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: applications
+  name: db
 spec:
   destination:
     name: in-cluster
     namespace: argo-cd
   project: default
   source:
-    repoURL: https://github.com/FastCook/ArgoApps.git
+    repoURL: https://github.com/FastCook2/ArgoApps.git
     path: DB
     targetRevision: HEAD
   syncPolicy:
