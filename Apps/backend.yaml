@@ -32,6 +32,11 @@ spec:
             configMapKeyRef:
               key: APP_URL
               name: config-map
+        - name: APP_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: APP_PORT
+              name: config-map
         - name: DATABASE_HOST
           valueFrom:
             configMapKeyRef:
