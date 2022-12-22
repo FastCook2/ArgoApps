@@ -14,6 +14,7 @@ spec:
       labels:
         app: backend
     spec:
+      restartPolicy: always
       containers:
       - env:
         - name: APP_NAME
