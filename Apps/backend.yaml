@@ -106,7 +106,7 @@ spec:
             configMapKeyRef:
               key: MAIL_FROM_ADDRESS
               name: config-map
-        image: sahakanush224/fast_cook_back:0.1.11
+        image: sahakanush224/fast_cook_back:0.1.12
         name: backend
         ports:
         - containerPort: 3000
