@@ -6,7 +6,7 @@ spec:
   selector:
     app: phpmyadmin
   ports:
-    - port: 84
+    - port: 80
       protocol: "TCP"
       targetPort: "phpmyadmin"
   type: LoadBalancer
