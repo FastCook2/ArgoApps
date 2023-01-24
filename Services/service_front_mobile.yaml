@@ -8,7 +8,7 @@ spec:
   selector:
     app: frontendm1
   ports:
-    - port: 83
+    - port: 80
       protocol: "TCP"
       targetPort: "frontendm1"
   type: LoadBalancer
