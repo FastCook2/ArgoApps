@@ -28,11 +28,10 @@ spec:
                   name: config-map
 
             - name: PMA_PORT
-              value: mysql
-              # valueFrom:
-              #   configMapKeyRef:
-              #     key: DATABASE_PORT
-              #     name: config-map
+              valueFrom:
+                configMapKeyRef:
+                  key: DATABASE_PORT
+                  name: config-map
 
             - name: MYSQL_USER
               valueFrom:
